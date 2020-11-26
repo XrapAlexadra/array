@@ -51,9 +51,9 @@ public class SortNumberArrayService {
         logger.info("Sort numberArray with SelectionSort");
     }
 
-    private void swap(NumberArray numberArray, int i, int j) {
-        int temp = numberArray.get(i);
-        numberArray.set(i, numberArray.get(j));
-        numberArray.set(j, temp);
+    private void swap(NumberArray numberArray, int index1, int index2) {
+        int temp = numberArray.get(index1);
+        numberArray.set(index1, numberArray.get(index2));
+        numberArray.set(index2, temp);
     }
 }

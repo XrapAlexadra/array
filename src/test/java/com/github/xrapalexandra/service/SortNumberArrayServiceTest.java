@@ -23,24 +23,24 @@ public class SortNumberArrayServiceTest extends Assert {
 
     @Test(dataProvider = "sortNumberArrayServiceData")
     public void testBubbleSort(NumberArray numberArray, NumberArray expected) {
-    NumberArray actual = numberArray;
-    sortNumberArrayService.bubbleSort(numberArray);
-
-    assertEquals(actual, expected);
+        sortNumberArrayService.bubbleSort(numberArray);
+        NumberArray actual = numberArray;
+        
+        assertEquals(actual, expected);
     }
 
     @Test(dataProvider = "sortNumberArrayServiceData")
     public void testInsertionSort(NumberArray numberArray, NumberArray expected) {
-        NumberArray actual = numberArray;
         sortNumberArrayService.insertionSort(numberArray);
+        NumberArray actual = numberArray;
 
         assertEquals(actual, expected);
     }
 
     @Test(dataProvider = "sortNumberArrayServiceData")
     public void testSelectionSort(NumberArray numberArray, NumberArray expected) {
-        NumberArray actual = numberArray;
         sortNumberArrayService.selectionSort(numberArray);
+        NumberArray actual = numberArray;
 
         assertEquals(actual, expected);
     }
