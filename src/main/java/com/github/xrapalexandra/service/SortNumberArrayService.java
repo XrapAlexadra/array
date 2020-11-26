@@ -12,7 +12,7 @@ public class SortNumberArrayService {
         boolean isSorted = false;
         while (!isSorted) {
             isSorted = true;
-            for (int i = 0; i < numberArray.size() - 1; i++) {
+            for (int i = 0; i < numberArray.length() - 1; i++) {
                 if (numberArray.get(i) > numberArray.get(i + 1)) {
                     isSorted = false;
                     swap(numberArray, i, i + 1);
@@ -23,7 +23,7 @@ public class SortNumberArrayService {
     }
 
     public void insertionSort(NumberArray numberArray) {
-        for (int i = 1; i < numberArray.size(); i++) {
+        for (int i = 1; i < numberArray.length(); i++) {
             int current = numberArray.get(i);
             int j = i - 1;
             while (j >= 0 && current < numberArray.get(j)) {
@@ -37,10 +37,10 @@ public class SortNumberArrayService {
     }
 
     public void selectionSort(NumberArray numberArray) {
-        for (int i = 0; i < numberArray.size(); i++) {
+        for (int i = 0; i < numberArray.length(); i++) {
             int minNumber = numberArray.get(i);
             int minIndex = i;
-            for (int j = i + 1; j < numberArray.size(); j++) {
+            for (int j = i + 1; j < numberArray.length(); j++) {
                 if (numberArray.get(j) < minNumber) {
                     minIndex = j;
                     minNumber = numberArray.get(j);

@@ -8,9 +8,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class NumberArrayInputReader {
@@ -27,9 +24,10 @@ public class NumberArrayInputReader {
     public NumberArray read(File file) {
         String stringFromFile = readStringFromFile(file);
         String[] arrayFromString = stringFromFile.split(" +");
-        List<Integer> readNumbers = Arrays.stream(arrayFromString)
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());
+        int[] readNumbers = new int[arrayFromString.length];
+        for(int i = 0; i< arrayFromString.length; i++){
+            readNumbers[i] = Integer.parseInt(arrayFromString[i]);
+        }
         logger.info("Read numbers from file: " + file + " in the NumbersArray");
         return new NumberArray(readNumbers);
     }

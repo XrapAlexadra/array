@@ -13,11 +13,11 @@ public class SortNumberArrayServiceTest extends Assert {
     @DataProvider
     public Object[][] sortNumberArrayServiceData() {
         return new Object[][]{
-                {new NumberArray(3, 125, 542, 0, 879, 35, 97), new NumberArray(0, 3, 35, 97, 125, 542, 879)},
-                {new NumberArray(3, 5, 0, 0, 0, 15, 87), new NumberArray(0, 0, 0, 3, 5, 15, 87)},
-                {new NumberArray(1, 125, 125, 3, 4, 54, 97), new NumberArray(1, 3, 4, 54, 97, 125, 125)},
-                {new NumberArray(7, 6, 5, 4, 3, 2, 1), new NumberArray(1, 2, 3, 4, 5, 6, 7)},
-                {new NumberArray(12, 13, 14, 12, 13, 15, 16), new NumberArray(12, 12, 13, 13, 14, 15, 16)}
+                {new NumberArray(new int[]{3, 125, 542, 0, 879, 35, 97}), new NumberArray(new int[]{0, 3, 35, 97, 125, 542, 879})},
+                {new NumberArray(new int[]{3, 5, 0, 0, 0, 15, 87}), new NumberArray(new int[]{0, 0, 0, 3, 5, 15, 87})},
+                {new NumberArray(new int[]{1, 125, 125, 3, 4, 54, 97}), new NumberArray(new int[]{1, 3, 4, 54, 97, 125, 125})},
+                {new NumberArray(new int[]{7, 6, 5, 4, 3, 2, 1}), new NumberArray(new int[]{1, 2, 3, 4, 5, 6, 7})},
+                {new NumberArray(new int[]{12, 13, 14, 12, 13, 15, 16}), new NumberArray(new int[]{12, 12, 13, 13, 14, 15, 16})}
         };
     }
 

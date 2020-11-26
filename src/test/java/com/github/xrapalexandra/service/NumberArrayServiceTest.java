@@ -17,8 +17,8 @@ public class NumberArrayServiceTest extends Assert {
 
     @BeforeMethod
     public void setUp() {
-        numberArray = new NumberArray(0, 21, 144, 987, 1597, 17, 113, 163, 199);
-        sortNumberArray = new NumberArray(0, 24, 56, 101, 256, 1024, 2056);
+        numberArray = new NumberArray(new int[]{0, 21, 144, 987, 1597, 17, 113, 163, 199});
+        sortNumberArray = new NumberArray(new int[]{0, 24, 56, 101, 256, 1024, 2056});
     }
 
     @Test

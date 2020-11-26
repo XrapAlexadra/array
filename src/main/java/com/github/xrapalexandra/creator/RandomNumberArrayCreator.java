@@ -21,9 +21,9 @@ public class RandomNumberArrayCreator {
     }
 
     public NumberArray create(int max, int amount){
-        NumberArray numberArray = new NumberArray();
+        NumberArray numberArray = new NumberArray(amount);
         for (int i = 0; i <amount; i++){
-            numberArray.add(random.nextInt(max));
+            numberArray.set(i, random.nextInt(max));
         }
         return numberArray;
     }

@@ -17,7 +17,7 @@ public class NumberArrayService {
     public int findMax(NumberArray numberArray) {
         int max = numberArray.get(0);
 
-        for (int i = 1; i < numberArray.size(); i++) {
+        for (int i = 1; i < numberArray.length(); i++) {
             if (max < numberArray.get(i)) {
                 max = numberArray.get(i);
             }
@@ -29,7 +29,7 @@ public class NumberArrayService {
     public int findMin(NumberArray numberArray) {
         int min = numberArray.get(0);
 
-        for (int i = 1; i < numberArray.size(); i++) {
+        for (int i = 1; i < numberArray.length(); i++) {
             if (min > numberArray.get(i)) {
                 min = numberArray.get(i);
             }
@@ -41,7 +41,7 @@ public class NumberArrayService {
     public int getIndexOf(NumberArray numberArray, int number) {
 
         int firstIndex = 0;
-        int lastIndex = numberArray.size() - 1;
+        int lastIndex = numberArray.length() - 1;
         int index = -1;
 
         while (firstIndex <= lastIndex) {
@@ -65,7 +65,7 @@ public class NumberArrayService {
     public List<Integer> findAllPrime(NumberArray numberArray) {
         List<Integer> primeNumbers = new ArrayList<>();
 
-        for (int i = 0; i < numberArray.size(); i++) {
+        for (int i = 0; i < numberArray.length(); i++) {
             int currentNumber = numberArray.get(i);
             if (isPrime(currentNumber)) {
                 primeNumbers.add(currentNumber);
@@ -78,7 +78,7 @@ public class NumberArrayService {
     public List<Integer> findAllFibonacci(NumberArray numberArray) {
         List<Integer> fibonacciInArray = new ArrayList<>();
 
-        for (int i = 0; i < numberArray.size(); i++) {
+        for (int i = 0; i < numberArray.length(); i++) {
             int currentNumber = numberArray.get(i);
             if (isFibonacci(currentNumber)) {
                 fibonacciInArray.add(currentNumber);
@@ -102,7 +102,7 @@ public class NumberArrayService {
     public List<Integer> findAllWithThreeNoRepeatDigit(NumberArray numberArray) {
         List<Integer> rightNumbers = new ArrayList<>();
 
-        for (int i = 0; i < numberArray.size(); i++) {
+        for (int i = 0; i < numberArray.length(); i++) {
             int currentNumber = numberArray.get(i);
 
             if (currentNumber > LOWER_BOUND_THREE_DIGIT_NUMBER && currentNumber < UPPER_BOUND_THREE_DIGIT_NUMBER) {

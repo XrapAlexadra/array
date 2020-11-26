@@ -1,40 +1,27 @@
 package com.github.xrapalexandra.model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class NumberArray {
 
-    private List<Integer> array;
+    private int[] array;
 
-    public NumberArray() {
-        array = new ArrayList<>();
+    public NumberArray(int length) {
+        array = new int[length];
     }
 
-    public NumberArray(List<Integer> array) {
+    public NumberArray(int[] array) {
         this.array = array;
     }
 
-    public NumberArray(Integer... array) {
-        List<Integer> list = Arrays.asList(array);
-        this.array = new ArrayList<>(list);
-    }
-
-    public int size() {
-        return array.size();
-    }
-
-    public void add(int number) {
-        array.add(number);
+    public int length() {
+        return array.length;
     }
 
     public int get(int index) {
-        return array.get(index);
+        return array[index];
     }
 
     public void set(int index, int number) {
-        array.set(index, number);
+        array[index] = number;
     }
 
     @Override
@@ -42,10 +29,10 @@ public class NumberArray {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NumberArray that = (NumberArray) o;
-        if(this.size() != that.size()){
+        if(this.length() != that.length()){
             return false;
         }
-        for (int i =0; i < size(); i++){
+        for (int i =0; i < length(); i++){
             if(this.get(i) != that.get(i)){
                 return false;
             }
