@@ -12,7 +12,7 @@ public class NumberArrayInputReaderTest extends Assert {
     @Test
     public void testRead() {
         NumberArray actual = numberArrayInputReader.read();
-        NumberArray expected = new NumberArray(23, 45, 67, 123, 45, 0, 456, 67, 89, 1234, 5678);
+        NumberArray expected = new NumberArray(new int[] {23, 45, 67, 123, 45, 0, 456, 67, 89, 1234, 5678});
 
         assertEquals(actual, expected);
     }
