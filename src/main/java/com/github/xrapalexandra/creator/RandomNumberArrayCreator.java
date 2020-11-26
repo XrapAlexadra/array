@@ -27,5 +27,4 @@ public class RandomNumberArrayCreator {
         }
         return numberArray;
     }
-
 }

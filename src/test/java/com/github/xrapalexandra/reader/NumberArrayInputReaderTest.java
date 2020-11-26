@@ -16,5 +16,4 @@ public class NumberArrayInputReaderTest extends Assert {
 
         assertEquals(actual, expected);
     }
-
 }

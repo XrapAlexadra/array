@@ -14,7 +14,7 @@ public class NumberArrayInputReader {
 
     private static final Logger logger = LogManager.getLogger(NumberArrayInputReader.class);
 
-    private static final File DEFAULT_FILE = new File("file/array.txt");
+    private static final File DEFAULT_FILE = new File("data/array.txt");
 
     public NumberArray read() {
         NumberArray numberArray = read(DEFAULT_FILE);
@@ -25,7 +25,7 @@ public class NumberArrayInputReader {
         String stringFromFile = readStringFromFile(file);
         String[] arrayFromString = stringFromFile.split(" +");
         int[] readNumbers = new int[arrayFromString.length];
-        for(int i = 0; i< arrayFromString.length; i++){
+        for (int i = 0; i < arrayFromString.length; i++) {
             readNumbers[i] = Integer.parseInt(arrayFromString[i]);
         }
         logger.info("Read numbers from file: " + file + " in the NumbersArray");
@@ -42,10 +42,8 @@ public class NumberArrayInputReader {
             }
         } catch (FileNotFoundException e) {
             logger.error(e);
-            e.printStackTrace();
         } catch (IOException e) {
             logger.error(e);
-            e.printStackTrace();
         }
         String result = stringBuilder.toString().trim();
         return result;

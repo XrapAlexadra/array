@@ -29,11 +29,11 @@ public class NumberArray {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NumberArray that = (NumberArray) o;
-        if(this.length() != that.length()){
+        if (this.length() != that.length()) {
             return false;
         }
-        for (int i =0; i < length(); i++){
-            if(this.get(i) != that.get(i)){
+        for (int i = 0; i < length(); i++) {
+            if (this.get(i) != that.get(i)) {
                 return false;
             }
         }
@@ -52,8 +52,13 @@ public class NumberArray {
 
     @Override
     public String toString() {
-        return "NumberArray{" +
-                "array=" + array +
-                '}';
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("NumberArray{ array= ");
+        for (int number : array) {
+            stringBuilder.append(number);
+            stringBuilder.append(" ");
+        }
+        stringBuilder.append('}');
+        return stringBuilder.toString();
     }
 }

@@ -22,7 +22,7 @@ public class NumberArrayService {
                 max = numberArray.get(i);
             }
         }
-        logger.info("The max Number of the numberArray is " + max);
+        logger.info("Max Number of " + numberArray + " is " + max);
         return max;
     }
 
@@ -34,7 +34,7 @@ public class NumberArrayService {
                 min = numberArray.get(i);
             }
         }
-        logger.info("The min Number of the numberArray is " + min);
+        logger.info("Min Number of " + numberArray + " is " + min);
         return min;
     }
 
@@ -58,7 +58,7 @@ public class NumberArrayService {
                 lastIndex = midIndex - 1;
             }
         }
-        logger.info("The index of number: " + number + " is " + index);
+        logger.info("Index of number: " + number + " is " + index + " in " + numberArray);
         return index;
     }
 
@@ -71,7 +71,7 @@ public class NumberArrayService {
                 primeNumbers.add(currentNumber);
             }
         }
-        logger.info("All prime numbers in the numberArray is " + primeNumbers);
+        logger.info("All prime numbers in " + numberArray + " is " + primeNumbers);
         return primeNumbers;
     }
 
@@ -84,7 +84,7 @@ public class NumberArrayService {
                 fibonacciInArray.add(currentNumber);
             }
         }
-        logger.info("All fibonacci numbers in the numberArray is " + fibonacciInArray);
+        logger.info("All fibonacci numbers in " + numberArray + " is " + fibonacciInArray);
         return fibonacciInArray;
     }
 
@@ -114,7 +114,7 @@ public class NumberArrayService {
                 }
             }
         }
-        logger.info("All three-digit numbers with no repeat from numberArray is " + rightNumbers);
+        logger.info("All three-digit numbers with no repeat from " + numberArray + " is " + rightNumbers);
         return rightNumbers;
     }
 

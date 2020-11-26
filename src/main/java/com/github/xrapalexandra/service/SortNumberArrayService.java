@@ -19,7 +19,7 @@ public class SortNumberArrayService {
                 }
             }
         }
-        logger.info("Sort numberArray with BubbleSort");
+        logger.info("Sort numberArray with BubbleSort: " + numberArray);
     }
 
     public void insertionSort(NumberArray numberArray) {
@@ -33,7 +33,7 @@ public class SortNumberArrayService {
             }
             numberArray.set(j + 1, current);
         }
-        logger.info("Sort numberArray with InsertionSort");
+        logger.info("Sort numberArray with InsertionSort " + numberArray);
     }
 
     public void selectionSort(NumberArray numberArray) {
@@ -48,7 +48,7 @@ public class SortNumberArrayService {
             }
             swap(numberArray, i, minIndex);
         }
-        logger.info("Sort numberArray with SelectionSort");
+        logger.info("Sort numberArray with SelectionSort " + numberArray);
     }
 
     private void swap(NumberArray numberArray, int index1, int index2) {
